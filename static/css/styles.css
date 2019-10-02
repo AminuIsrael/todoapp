@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+body {
+    background: #333333;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* utilities */
+
+.line-break {
+    border: 0.5px solid #33333328;
+    margin: 1rem 0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mg-left {
+    margin-left: 1rem;
+}
+
+.del-btn {
+    padding: 0.4rem;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.action-btn {
+    padding: 1rem 2rem;
+    background: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.action-btn:hover {
+    background: rgb(2, 77, 2);
+}
+
+.del-btn:hover {
+    background: rgb(190, 19, 19);
+}
+
+.todo-app {
+    width: 411px;
+    height: auto;
+    margin: 2% auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.todo-app .header .logo h2 {
+    text-align: center;
+}
+
+.todo-app .action-wrapper form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-app .action-wrapper form input[type="text"] {
+    width: 70%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #33333393;
+    outline: none;
+}
+
+.todo-app .main ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}

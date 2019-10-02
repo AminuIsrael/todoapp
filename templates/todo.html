@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <div class="todo-app">
+        <div class="header">
+            <div class="logo">
+                <h2>MyTodo</h2>
+                <hr class="line-break">
+            </div>
+        </div>
+        <div class="main">
+            <h4>Welcome to my Todo App, Please add your item.</h4>
+            <hr class="line-break">
+            <ul>
+                {% for todo_item in all_item %}
+                <li>
+                    <div class="content">
+                        <input type="checkbox">
+                        <p class="mg-left"> {{todo_item.content}}</p>
+                    </div>
+                    <form action="/deleteTodo/{{todo_item.id}}/" method="POST">{% csrf_token %}
+                        <input type="submit" value="Delete" class="del-btn" />
+                    </form>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="action-wrapper">
+            <hr class="line-break">
+            <form action="/addTodo/" method="POST">{% csrf_token %}
+                <input type="text" name="content" placeholder="Add Todo Item" />
+                <input type="submit" value="Add" class='action-btn' />
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

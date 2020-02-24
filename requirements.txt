@@ -2,7 +2,7 @@ astroid==2.1.0
 autopep8==1.4.4
 backcall==0.1.0
 beautifulsoup4==4.7.1
-bleach==3.1.0
+bleach==3.1.1
 bokeh==1.1.0
 camelcase==0.2
 certifi==2018.11.29
